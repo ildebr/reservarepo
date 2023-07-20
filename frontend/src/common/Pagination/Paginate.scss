@@ -1,0 +1,40 @@
+@import '../common.scss';
+
+.paginator-container{
+    width: 100%;
+    
+    p{
+        margin: 0;
+    }
+  }
+  
+  .paginator-container .page-items{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  
+  .paginator-container .page-items .page-item{
+    padding: .85rem;
+    cursor: pointer;
+    border-radius: 25px;
+    height: 16px;
+    width: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .paginator-container .page-items .page-item.active{
+    background-color: $element-color;
+  }
+  
+  .paginator-container li{
+    list-style: none;
+  }
+  
+  .page-item.disabled{
+    pointer-events: none;
+    cursor: default;
+    background-color: black;
+  }
