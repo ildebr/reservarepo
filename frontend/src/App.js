@@ -16,7 +16,7 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Routes>
-              <Route path="/login" element={<Login />}></Route>
+              <Route path="" element={<Login />}></Route>
               <Route path='/dashboard' element={<PrivateRoute/>}>
                 <Route index element={<Dashboard />} />
               </Route>

@@ -25,7 +25,7 @@ const ListaReserva = ({alerta, isAuthenticated,loading, reservas}) =>{
                     {reservas.map((el)=>{
                         
                         return <tr>
-                            <td><Link to={`/reserva/detalle/${el.id}`} >{el.nombre} </Link></td>
+                            <td><Link to={`/reserva/detalle/${el.id}`} >{el.usuario} </Link></td>
                             <td>{el.fecha_reserva.split('T')[0]}</td>
                         </tr>
                     })}

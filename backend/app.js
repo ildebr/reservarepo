@@ -188,7 +188,7 @@ app.get('/usuario/lista', (req,res)=>{
     body= req.body;
 
     con.connect(function(){
-        con.query(`SELECT * FROM usuario us LEFT JOIN rol r ON us.rolusuario = r.id WHERE r.tipo='usuario'`, function(err, result, fields){
+        con.query(`SELECT *,us.id as usid FROM usuario us LEFT JOIN rol r ON us.rolusuario = r.id WHERE r.tipo='usuario'`, function(err, result, fields){
             console.log(result)
 
             res.status(200);
@@ -206,7 +206,7 @@ app.get('/usuario/lista', (req,res)=>{
 
 app.post('/reserva', (req,res)=>{
     body =req.body
-    console.log(body)
+    console.log('al',body)
     con.connect(function(){
         con.query(`INSERT INTO reserva(tipo_reserva,cantidad_personas,estado,usuario,descripcion,fecha_reserva) VALUES('${body.tipo_reserva}', '${body.cantidad_personas}','${body.estado}','${body.usuario}','${body.descripcion}','${body.fecha}') `)
         res.status(200);

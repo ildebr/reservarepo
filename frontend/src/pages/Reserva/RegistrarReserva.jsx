@@ -48,7 +48,8 @@ const RegistrarUsuario = ({alerta, isAuthenticated,loading,creado, usuarios}) =>
                 <select name="usuario" id="usuario" value={usuario} onChange={(e) => onChange(e)} className="username__input" required>
                     <option>----</option>
                     {usuarios?.map((el)=>{
-                        return <option value={el.id}>{el.nombre}</option>
+                        console.log(el)
+                        return <option value={el.usid}>{el.nombre}</option>
                     })}
                 </select>
                 <span className="input-placeholder">Nombres</span>
